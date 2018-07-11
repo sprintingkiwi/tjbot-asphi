@@ -25,8 +25,23 @@
         In questo esempio, il LED si accende ripetutamente di un colore scelto a caso tra una lista di colori.
     </p>
 
+    <h2>Conversation (Watson Assistant)</h2>
     <p>
-        
+        <img src="img/converse.png" alt="Conversa con spazio di lavoro di Watson Assistant"><br>
+        Invia una parola o frase, scritta come primo parametro (nel primo spazio vuoto), allo spazio di lavoro (workspace) il cui codice identificativo va copiato e incollato come secondo parametro. Questo blocchetto restituisce quindi la risposta elaborata dal Watson Assistant.<br>
+        N.B. Il workspace deve appartenere al servizio le cui credenziali sono state inserite nei "settings" del TJBot, nel campo della Conversation (o Watson Assistant).<br>
+        <img src="img/written_conversation.png" alt="Esempio di ciclo per una conversazione scritta con Watson tramite SNAP"><br>
+        In questo modo viene "chiesto" all'utente di inserire una frase su SNAP, la "risposta" dell'utente viene inviata alla conversazione di Watson, infine (grazie al blocchetto "dire") la sprite mostrerà un fumetto con la risposta ricevuta da Watson. Poi tutto si ripete.
+    </p>
+
+    <h1>Suono</h1>
+    <h2>Text to Speech</h2>
+    <p>
+        <img src="img/speak.png" alt="Parla parola o frase con voce"><br>
+        Invia una parola o frase (primo parametro) al servizio di sintesi vocale di Watson, utilizzando la voce indicata nel secondo parametro.<br>
+        <img src="img/speak_example.png" alt="Esempio di utilizzo dei blocchi parla per il text to speech"><br>
+        La voce default rappresenta la voce selezionata nei "settings" del TJBot.
+        La voce deve essere scritta in questo formato: it-IT_FrancescaVoice, fr-FR_ReneeVoice e così via. Le voci disponibili sono elencate nella pagina dei "settings".
     </p>
 
 

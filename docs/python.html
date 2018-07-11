@@ -9,11 +9,29 @@
 </head>
 
 <body>
+    <h1>Import TJBot library</h1>
+    <code class="language-python">
+        from tjbot import * <br>
+    </code><br>
+
+    <h1>Instantiate a TJBot object</h1>
+    <code class="language-python">
+        bot = TJBot("192.168.1.153")
+    </code><br>
+
     <h1>Set arm angle</h1>
     <code class="language-python">
-        arm(angle)
+        TJBot.arm(self, angle)
     </code><br>
     Sets TJBot's arm servo motor to the specified integer parameter "angle".<br>
+    Example:<br>
+    <code class="language-python">
+        for i in range(5):
+            bot.arm(90)
+            time.sleep(1)
+            bot.arm(180)
+            time.sleep(1)
+    </code><br>
 
     <h1>Set LED color</h1>
     <code class="language-python">

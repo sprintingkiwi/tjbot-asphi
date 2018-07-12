@@ -12,19 +12,22 @@
     <h1>Import TJBot library</h1>
     <code class="language-python">
         from tjbot import * <br>
-    </code><br>
+    </code>
+    <br>
 
     <h1>Instantiate a TJBot object</h1>
     <code class="language-python">
-        bot = TJBot("192.168.1.153")
-    </code><br>
+        bot = TJBot("IP ADDRESS")
+    </code>
+    <br>
 
     <h1>Set arm angle</h1>
     <code class="language-python">
-        TJBot.arm(self, angle)
-    </code><br>
-    Sets TJBot's arm servo motor to the specified integer parameter "angle".<br>
-    Example:<br>
+        arm(angle)
+    </code>
+    <br> Sets TJBot's arm servo motor at the specified integer parameter "angle".
+    <br> Example:
+    <br>
     <pre><code class="language-python">        
 for i in range(5):
     bot.arm(90)
@@ -36,8 +39,8 @@ for i in range(5):
     <h1>Set LED color</h1>
     <code class="language-python">
         led(color)
-    </code><br>
-    Color parameters must be string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
+    </code>
+    <br> Color parameters must be string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
 
 </body>
 

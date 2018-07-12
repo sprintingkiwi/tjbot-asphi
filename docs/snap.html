@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>TJBot-ASPHI</title>
+    <title>TJBot-ASPHI SNAP</title>
     <meta charset="utf-8" />
 </head>
 
@@ -10,40 +10,125 @@
     <h1>Movimento</h1>
     <h2>Angolo del braccio</h2>
     <p>
-        <img src="img/arm_angle.png" alt="Imposta angolo braccio"><br>
-        Imposta il servo motore del braccio all'angolo specificato dal parametro numerico.<br>
-        <img src="img/wave.png" alt="Esempio di programma che utilizza il movimento del braccio"><br>
-        Questo script di esempio dice al TJBot di muovere il braccio in alto e in basso per 5 volte, come se stesse salutando qualcuno.
+        <img src="img/arm_angle.png" alt="Imposta angolo braccio ...">
+        <br> Imposta il servo motore del braccio all'angolo specificato dal parametro numerico.
+    </p>
+    <p>
+        <img src="img/wave.png" alt="Esempio di programma che utilizza il movimento del braccio">
+        <br> Questo script di esempio dice al TJBot di muovere il braccio in alto e in basso per 5 volte, come se stesse salutando
+        qualcuno.
     </p>
 
     <h1>Aspetto</h1>
     <h2>Colore del LED</h2>
     <p>
-        <img src="img/led.png" alt="Imposta colore LED"><br>
-        Accende il LED sulla testa del TJBot del colore specificato. Il parametro deve essere testuale e scritto in inglese (esempi: "green", "red", "blue", "yellow"). Il colore "black" causa lo spegnimento del LED.<br>
-        <img src="img/led_play.png" alt="Esempio di programma che utilizza il colore del LED"><br>
-        In questo esempio, il LED si accende ripetutamente di un colore scelto a caso tra una lista di colori.
+        <img src="img/led.png" alt="Imposta colore LED ...">
+        <br> Accende il LED sulla testa del TJBot del colore specificato. Il parametro deve essere testuale e scritto in inglese
+        (esempi: "green", "red", "blue", "yellow"). Il colore "black" causa lo spegnimento del LED.
+    </p>
+    <p>
+        <img src="img/led_play.png" alt="Esempio di programma che utilizza il colore del LED">
+        <br> In questo esempio, il LED si accende ripetutamente di un colore scelto a caso tra una lista di colori.
     </p>
 
     <h2>Conversation (Watson Assistant)</h2>
     <p>
-        <img src="img/converse.png" alt="Conversa con spazio di lavoro di Watson Assistant"><br>
-        Invia una parola o frase, scritta come primo parametro (nel primo spazio vuoto), allo spazio di lavoro (workspace) il cui codice identificativo va copiato e incollato come secondo parametro. Questo blocchetto restituisce quindi la risposta elaborata dal Watson Assistant.<br>
-        N.B. Il workspace deve appartenere al servizio le cui credenziali sono state inserite nei "settings" del TJBot, nel campo della Conversation (o Watson Assistant).<br>
-        <img src="img/written_conversation.png" alt="Esempio di ciclo per una conversazione scritta con Watson tramite SNAP"><br>
-        In questo modo viene "chiesto" all'utente di inserire una frase su SNAP, la "risposta" dell'utente viene inviata alla conversazione di Watson, infine (grazie al blocchetto "dire") la sprite mostrerà un fumetto con la risposta ricevuta da Watson. Poi tutto si ripete.
+        <img src="img/converse.png" alt="Conversa con spazio di lavoro ...">
+        <br> Invia una parola o frase, scritta come primo parametro (nel primo spazio vuoto), allo spazio di lavoro (workspace)
+        il cui codice identificativo va copiato e incollato come secondo parametro. Questo blocchetto restituisce quindi
+        la risposta elaborata dal Watson Assistant.
+        <br> N.B. Il workspace deve appartenere al servizio le cui credenziali sono state inserite nei "settings" del TJBot,
+        nel campo della Conversation (o Watson Assistant).
+    </p>
+    <p>
+        <img src="img/written_conversation.png" alt="Esempio di ciclo per una conversazione scritta con Watson tramite SNAP">
+        <br> In questo modo viene "chiesto" all'utente di inserire una frase su SNAP, la "risposta" dell'utente viene inviata
+        alla conversazione di Watson, infine (grazie al blocchetto "dire") la sprite mostrerà un fumetto con la risposta
+        ricevuta da Watson. Poi tutto si ripete.
     </p>
 
     <h1>Suono</h1>
     <h2>Text to Speech</h2>
     <p>
-        <img src="img/speak.png" alt="Parla parola o frase con voce"><br>
-        Invia una parola o frase (primo parametro) al servizio di sintesi vocale di Watson, utilizzando la voce indicata nel secondo parametro.<br>
-        <img src="img/speak_example.png" alt="Esempio di utilizzo dei blocchi parla per il text to speech"><br>
-        La voce default rappresenta la voce selezionata nei "settings" del TJBot.
-        La voce deve essere scritta in questo formato: it-IT_FrancescaVoice, fr-FR_ReneeVoice e così via. Le voci disponibili sono elencate nella pagina dei "settings".
+        <img src="img/speak.png" alt="Parla ... con voce ...">
+        <br> Invia una parola o frase (primo parametro) al servizio di sintesi vocale di Watson, utilizzando la voce indicata
+        nel secondo parametro.
+    </p>
+    <p>
+        <img src="img/speak_example.png" alt="Esempio di utilizzo dei blocchi parla per il text to speech">
+        <br> La voce default rappresenta la voce selezionata nei "settings" del TJBot. La voce deve essere scritta in questo
+        formato: it-IT_FrancescaVoice, fr-FR_ReneeVoice e così via. Le voci disponibili sono elencate nella pagina dei "settings".
     </p>
 
+    <h1>Sensori</h1>
+    <h2>Speech to Text</h2>
+    <p>
+        <img src="img/listen.png" alt="Quello che sto ascoltando in lingua ...">
+        <br> Registra i suoni fino a che non percepisce 2 secondi di silenzio. Successivamente invia l'audio al servizio di Speech
+        to Text di Watson e attende la risposta. La registrazione viene analizzata sulla base della lingua specificata nel
+        parametro (ad esempio: "it" per italiano, "fr" per francese, "en" per inglese, "es" per spagnolo, e così via). Il
+        parametro "default" sta ad indicare la lingua della voce selezionata nella pagina dei "settings" del TJBot. Infine,
+        il blocchetto restituisce una parola o frase di testo scritto corrispondente a ciò che Watson è riuscito a riconoscere
+        nei suoni registrati.
+    </p>
+    <p>
+        <img src="img/listen_example.png" alt="Esempio di utilizzo dello Speech to Text">
+        <br> In questo esempio, il TJBot incita a dire qualcosa, poi registra la voce e salva le parole comprese in una variabile
+        precedentemente creata. Infine il TJBot parla dicendo l'unione della frase "Ho capito..." e delle parole capite.
+    </p>
+
+    <h2>Visual Recognition</h2>
+    <h3>Classificatore di default</h3>
+    <p>
+        <img src="img/visual_recognition.png" alt="Quello che sto vedendo">
+        <br> Scatta una foto e la invia al servizio di Visual Recognition di Watson. Questa foto viene analizzata in base al
+        "classificatore di default", ovvero secondo quello che Watson già conosce, senza bisogno che sia allenato in maniera
+        specifica. Una volta ricevuta la risposta da Watson, questo blocco restituisce una o più parole corrispondenti alla
+        descrizione dell'oggetto più saliente tra quelli riconosciuti nella foto.
+    </p>
+    <h3>Classificatore personalizzato</h3>
+    <p>
+        <img src="img/vrec_custom_classifier.png" alt="Quello che riconosco tra ... con soglia ...">
+        <br> Scatta una foto e la invia al servizio di Visual Recognition. La foto viene analizzata sulla base del classificatore
+        personalizzato addestrato dall'utente. Il codice del classificatore va indicato nel primo parametro. La soglia (secondo
+        parametro) è invece un numero decimale compreso tra 0 e 1 che serve ad indicare con quale livello di "certezza" che
+        Watson deve avere nel riconscimento di un oggetto affinché possa dare una risposta. Una soglia più alta fa sì che
+        Watson fornisca risposte più attendibili, ma aumenta la probabilità che non abbia nessuna risposta da dare, oppure
+        che abbia solamente risposte molto generiche. Una soglia più bassa garantisce risposte molto specifiche, tuttavia
+        aumenta la probabilità degli errori.
+    </p>
+
+    <h1>Operatori</h1>
+    <h2>Traduttore</h2>
+    <p>
+        <img src="img/translator.png" alt="Traduci ... da ... a ...">
+        <br> Restituisce la traduzione della parola o frase scritta come primo parametro. Nel secondo parametro deve essere specificata
+        la lingua di origine e nel terzo parametro la lingua di destinazione ("it", "fr, "es" e così via).
+    </p>
+
+    <h2>Tone Analyzer</h2>
+    <p>
+        <img src="img/tone_analyzer.png" alt="Tono di ...">
+        <br> Questo blocco prende come parametro una parola o frase e la invia al servizio di Tone Analyzer di Watson. Quando
+        riceve la risposta, restituisce una parola inglese che si riferisce alla emozione che con maggiore probabilità ha
+        rilevato all'interno della frase inviata ("Joy", "Sadness", "Anger", "Surprise").
+    </p>
+
+    <h1>Progetti di esempio</h1>
+    <h2>Interprete</h2>
+    <p>
+        <img src="img/interpreter.png" alt="Esempio di programma che fa comportare il TJBot come un interprete">
+        <br> In questo esempio il TJBot si comporta come un interprete: prima registra le parole o le frasi pronunciate a voce
+        e le trasforma in testo scritto, poi le traduce in una lingua diversa e le pronuncia grazie al Text to Speech (blocco
+        "parla").
+    </p>
+
+    <h2>Emotions-Detector</h2>
+    <p>
+        <img src="img/emotions_detector.png" alt="Esempio di programma che fa comportare il TJBot come un interprete">
+        <br> Il TJBot registra la voce, la traduce in testo e la analizza con il Tone Analyzer di Watson. Successivamente accende
+        il LED sopra alla testa di un colore diverso in base alla emozione percepita.
+    </p>
 
 </body>
 

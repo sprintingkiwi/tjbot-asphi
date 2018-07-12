@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>TJBot-ASPHI</title>
+    <title>TJBot-ASPHI PYTHON</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="prism.css">
     <script src="prism.js"></script>
@@ -25,19 +25,19 @@
     </code><br>
     Sets TJBot's arm servo motor to the specified integer parameter "angle".<br>
     Example:<br>
-    <code class="language-python">
-        for i in range(5):
-            bot.arm(90)
-            time.sleep(1)
-            bot.arm(180)
-            time.sleep(1)
-    </code><br>
+    <pre><code class="language-python">        
+for i in range(5):
+    bot.arm(90)
+    time.sleep(1)
+    bot.arm(180)
+    time.sleep(1)
+    </code><br></pre>
 
     <h1>Set LED color</h1>
     <code class="language-python">
         led(color)
     </code><br>
-    Color parameters must be string english words like "red", "green" or "yellow". The "black" argument causes the LED to turn off.
+    Color parameters must be string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
 
 </body>
 

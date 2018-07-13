@@ -4,8 +4,8 @@
 <head>
     <title>TJBot-ASPHI PYTHON</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="prism.css">
-    <script src="prism.js"></script>
+    <link rel="stylesheet" type="text/css" href="prism2.css">
+    <script src="prism2.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,15 @@
     <code class="language-python">
         arm(angle)
     </code>
-    <br> Sets TJBot's arm servo motor at the specified integer parameter "angle".
+    <br> Moves the TJBot's arm to a specified angle.
+    <dl>
+        <dt>
+            <code>angle</code>
+        </dt>
+        <dd>
+            The integer angle to set the arm servo motor.
+        </dd>
+    </dl>
     <br> Example:
     <br>
     <pre><code class="language-python">        
@@ -40,7 +48,121 @@ for i in range(5):
     <code class="language-python">
         led(color)
     </code>
-    <br> Color parameters must be string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
+    <dl>
+        <dt>
+            <code>color</code>
+        </dt>
+        <dd>
+            Color parameters must be string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
+        </dd>
+    </dl>
+    <br> Example:
+    <br>
+    <pre><code class="language-python">        
+colors = ["red", "green", "blue", "yellow", "purple", "orange", "black"]
+for i in range(10):
+    for color in colors:
+        bot.led(color)
+    </code><br></pre>
+
+    <h1>Conversation (Watson Assistant)</h1>
+    <code class="language-python">
+        converse(user_input, workspace)
+    </code>
+    <dl>
+        <dt>
+            <code>user_input</code>
+        </dt>
+        <dd>
+            The input message for the "dialog flow" of the Watson Assistant conversation.
+        </dd>
+        <dt>
+            <code>workspace</code>
+        </dt>
+        <dd>
+            The ID of the workspace you want to converse with.
+        </dd>
+    </dl>
+    <br> Example:
+    <br>
+    <pre><code class="language-python">        
+user_input = ""
+response = ""
+workspace = "1272c7d4-3048-4dac-b1fb-9cd7ffdcf4f0"
+
+while True:
+    response = bot.converse(user_input, workspace))
+    print(response)
+    user_input = input("Write here: \n")
+    </code><br></pre>
+
+    <h1>Text to Speech</h1>
+    <code class="language-python">
+        speak(text, voice="default", wait="true")
+    </code>
+    <dl>
+        <dt>
+            <code>text</code>
+        </dt>
+        <dd>
+            The text to be synthesized.
+        </dd>
+        <dt>
+            <code>voice</code>
+        </dt>
+        <dd>
+            The voice to use for the speech synthesis. It must be written like: "it-IT_FrancescaVoice", "fr-FR_ReneeVoice", "en-US_AllisonVoice",
+            etc. The full list of voices can be found in the "settings" page of the TJBot.
+        </dd>
+        <dt>
+            <code>wait</code>
+        </dt>
+        <dd>
+            Whether or not the program should wait for the end of the speech before moving forward.
+        </dd>
+    </dl>
+    <br> Example:
+    <br>
+    <pre><code class="language-python"> 
+voice = "fr-FR_ReneeVoice"
+bot.speak("Bonjour!", voice)       
+text = input("Que devrais-je dire? \n")
+bot.speak(text, voice)
+    </code><br></pre>
+
+    <h1>Speech to Text</h1>
+    <code class="language-python">
+        listen(language="default")
+    </code>
+    <br> Records sounds until it hears 2 seconds of silence and write it to an audio file. Then it sends the audio file to the Speech to Text Watson service and waits for an answer.
+    <dl>
+        <dt>
+            <code>language</code>
+        </dt>
+        <dd>
+            The language that Watson should use to understand the words in the audio file ("it", "en", "fr", "es", "jp", etc).
+        </dd>
+    </dl>
+    <br> Example:
+    <br>
+    <pre><code class="language-python"> 
+print("Say something!")
+user_input = bot.listen("it")
+print("I understood: " + user_input)
+    </code><br></pre>
+
+    <h1>Visual Recognition</h1>
+    <code class="language-python">
+        recognize(classifier="default", threshold="0.6"):
+    </code>
+    <br>
+    <br> Example:
+    <br>
+    <pre><code class="language-python"> 
+target = bot.recognize("robots_1670531342", 0.6)
+print("I recognize... " + target)
+    </code><br></pre>
+
 
 </body>
 

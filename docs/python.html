@@ -54,7 +54,7 @@ for i in range(5):
             <code>color</code>
         </dt>
         <dd>
-            Must be a string english words like "red", "green" or "yellow" (use "black" to turn off the LED).
+            Must be a string english word like "red", "green" or "yellow" (use "black" to turn off the LED).
         </dd>
     </dl>
     <br> Example:
@@ -64,6 +64,7 @@ colors = ["red", "green", "blue", "yellow", "purple", "orange", "black"]
 for i in range(10):
     for color in colors:
         bot.led(color)
+        time.sleep(1)
     </code><br></pre>
 
     <h1>Conversation (Watson Assistant)</h1>
@@ -154,15 +155,37 @@ print("I understood: " + user_input)
 
     <h1>Visual Recognition</h1>
     <code class="language-python">
-        recognize(classifier="default", threshold="0.6"):
+        recognize(classifier="default", threshold="0.6")
     </code>
-    <br>
+    <br> Takes a picture and sends it to Watson.
+    <dl>
+        <dt>
+            <code>classifier</code>
+        </dt>
+        <dd>
+            The specific classifier that will be used to analyze the picture.
+            You can create custom classifiers using the Watson Visual Recognition tool.
+        </dd>
+        <dt>
+            <code>threshold</code>
+        </dt>
+        <dd>
+            A float number between 0 and 1. A higher threshold means less results but it's more accurate.
+        </dd>
+    </dl>
     <br> Example:
     <br>
     <pre><code class="language-python"> 
 target = bot.recognize("robots_1670531342", 0.6)
 print("I recognize... " + target)
     </code><br></pre>
+
+    <h1>Language Translator</h1>
+    <code class="language-python">
+        translate(text, source, target)
+    </code>
+    <br>
+    <br> Example:
 
 
 </body>

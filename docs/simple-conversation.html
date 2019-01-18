@@ -9,7 +9,7 @@
 
 <body>
     <p class="h0">Simple SNAP! conversation and AI-related blocks</p>
-    
+
     <h1>Setup</h1>
     <h2>Download app</h2>
     <ol>
@@ -27,6 +27,8 @@
     </ol>
     <p>
         Fare doppio clic sul file scaricato per aprirlo e lasciarlo in esecuzione in background.
+        <br> ATTENZIONE: Windows oppure il proprio antivirus potrebbero segnalare un rischio nell'aprire questo file. In tal
+        caso bisogna dire ad un eventuale pop-up di eseguire comunque il programma.
     </p>
 
     <h2>Vai all'editor di SNAP!</h2>
@@ -76,11 +78,63 @@
 
     <h2>Conversation</h2>
     <p>
-        <img src="img/apikey_url.png" alt="Esempio di programma che fa comportare il TJBot come un interprete">
-        <br> Per poter usare i blocchetti legati alla conversation, che si basa sul servizio IBM Watson Assistant, è necessario
-        possedere un account Watson e delle credenziali per la risorsa Assistant. Per farlo, segui <a href="account-conversation-tutorial.html" target="_blank">questo tutorial</a>.
+        Per poter usare i blocchetti legati alla conversation, che si basa sul servizio IBM Watson Assistant, è necessario possedere
+        un account Watson e delle credenziali per la risorsa Assistant. Per farlo, segui
+        <a href="account-conversation-tutorial.html" target="_blank">questo tutorial</a>.
         <br> Copiare e incollare le proprie credenziali, costituite da apikey e URL, nei blocchi di SNAP come illustrato qui
         sopra. Le variabili apikey e URL sono già presenti in ogni nuovo progetto.
+        <img src="img/apikey_url.png" alt="Variabili per impostare apikey e URL della conversation">
+        <br> Ricordarsi poi di cliccare sulla bandierina verde per impostare il valore delle suddette variabili.
+    </p>
+
+    <h3>Aggiungere un esempio ad una classe di parole o frasi</h3>
+    <p>
+        <img src="img/add_intent.png" alt="Aggiungere un esempio ad una classe di parole o frasi">
+        <br> Le "classi" della conversation sono insiemi di parole o frasi che si riferiscono ad una medesima intenzione comunicativa
+        (ad esempio "ciao", "buongiorno" e "buonasera" sono tutti modi per salutare). Con questo blocco è possibile aggiungere
+        un esempio di parola o frase ad una classe.
+    </p>
+
+    <h3>Controllare che la conversazione sia pronta</h3>
+    <p>
+        <img src="img/conversation_status.png" alt="Controllare che la conversazione sia pronta">
+        <br> Una volta aggiunto un esempio ad una classe, il servizio Watson Assistant ha bisogno di un po' di tempo per "allenarsi".
+        Questo blocco ci dice se la conversazione è pronta o meno ad essere utilizzata restituendoci VERO o FALSO.
+    </p>
+    <h4>Esempio</h4>
+    <p>
+        <img src="img/conversation_status_example.png" alt="Esempio controllo status conversazione">
+        <br> In questo esempio all'interno di un ciclo infinito "per sempre" viene ripetuto un controllo per cui se la conversazione
+        risulta pronta il computer mi dice che è pronto, altrimenti mi dice che si sta allenando. Attende 2 secondi prima
+        di controllare nuovamente. Il blocco "conversazione pronta" rappresenta quindi la "condizione" da mettere all'interno
+        del blocco "se... allora... altrimenti...".
+    </p>
+
+    <h3>Riconoscere una classe in una parola o frase</h3>
+    <p>
+        <img src="img/check_intent.png" alt="Riconoscere una classe in una parola o frase">
+        <br> Questo blocco ci dice VERO o FALSO a seconda che la parola o frase scritta nel secondo parametro (es. "buongiorno")
+        venga riconosciuta dal Watson Assistant all'interno dell'insieme di parole o frasi (ovvero la "classe" precedentemente
+        definita, nel nostro esempio "saluti") indicato nel primo parametro.
+    </p>
+    <h4>Esempio</h4>
+    <p>
+        <img src="img/check_intent_example_1.png" alt="">
+        <br>
+        <img src="img/check_intent_example_2.png" alt="">
+        <br> In questo esempio viene inizialmente allenato il computer a riconoscere una classe chiamata "info-nome" con una
+        serie di frasi di esempio che rappresentano modi in cui è possibile chiedere il nome ad un interlocutore.
+        <br> Successivamente, premendo la barra spaziatrice sulla tastiera, il programma resta in attesa che la conversazione
+        sia pronta. Solo in quel caso il programma procederà ad eseguire le istruzioni successive e dirà "Ciao!".
+        <br> A quel punto rimarrà in ascolto per il riconoscimento vocale (il blocco "quello che sto ascoltando"). Se riconosce le parole capite come una frase appartenente alla classe
+        "info-nome" allora risponde vocalmente dicendo il proprio nome, altrimenti comunica di non aver capito.
+    </p>
+
+    <h3>Azzerare le classi della conversazione</h3>
+    <p>
+        <img src="img/reset_conversation.png" alt="Azzerare le classi della conversazione">
+        <br> Permette di azzerare tutte le classi e gli esempi creati.
+        <br> ATTENZIONE: tutto il lavoro di addestramento del Watson Assistant precedentemente fatto verrà annullato.
     </p>
 
     <h1>CREDITS</h1>

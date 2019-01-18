@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>TJBot-ASPHI SNAP</title>
+    <title>SNAP! simple conversation</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="snap_docs.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
     <h2>Vai all'editor di SNAP!</h2>
     <a href="https://snap.berkeley.edu/snapsource/snap.html#open:https://bitbucket.org/sprintingkiwi/snap-conversation/raw/master/New_Conversation_Project.xml"
         target="_blank">
-        Click here
+        Clicca qui
     </a>
     <p>
         NB: Se non state utilizzando Chrome Web Browser alcune funzioni potrebbero avere dei problemi.
@@ -46,19 +47,36 @@
     <p>
         <img src="img/listen.png" alt="Quello che sto ascoltando in lingua ...">
         <br> Registra la voce e la analizzata sulla base della lingua specificata nel parametro (ad esempio: "it" per italiano,
-        "fr" per francese, "en" per inglese, "es" per spagnolo, e così via). Il parametro "default" sta ad indicare la lingua
-        della voce selezionata nella pagina dei "settings" del TJBot. Infine, il blocchetto restituisce una parola o frase
-        di testo scritto corrispondente a ciò che Watson è riuscito a riconoscere nei suoni registrati.
+        "fr" per francese, "en" per inglese, "es" per spagnolo, e così via). Infine, il blocchetto restituisce una parola
+        o frase di testo scritto corrispondente a ciò che Watson è riuscito a riconoscere nei suoni registrati.
     </p>
+    <h3>Esempio</h3>
     <p>
-        <img src="img/listen_example.png" alt="Esempio di utilizzo dello Speech to Text">
-        <br> In questo esempio, il TJBot incita a dire qualcosa, poi registra la voce e salva le parole comprese in una variabile
-        precedentemente creata. Infine il TJBot parla dicendo l'unione della frase "Ho capito..." e delle parole capite.
+        <img src="img/listen_example.png" alt="Esempio riconoscimento vocale">
+        <br> In questo esempio, il programma incita a dire qualcosa, registra la voce e salva le parole comprese in una variabile
+        precedentemente creata. Infine parla dicendo l'unione della frase "Ho capito..." e delle parole capite.
+    </p>
+
+    <h2>Traduttore</h2>
+    <p>
+        <img src="img/translator.png" alt="Traduci ... da ... a ...">
+        <br> Restituisce la traduzione della parola o frase scritta come primo parametro. Nel secondo parametro deve essere specificata
+        la lingua di origine e nel terzo parametro la lingua di destinazione ("it", "fr, "es" e così via).
+    </p>
+    <h3>Esempio</h3>
+    <p>
+        <img src="img/translator_example.png" alt="Esempio traduttore">
+        <br> In questo esempio, il programma aspetta che gli venga detto qualcosa, poi quello che ha capito in seguito al riconoscimento
+        vocale viene tradotto dall'italiano al francese. Infine effettua la sintesi vocale del risultato della traduzione,
+        parlando con una voce della medesima lingua.
+        <br> NB: i blocchetti di istruzioni messi uno dentro l'altro vengono sempre eseguiti dal più interno al più esterno.
     </p>
 
     <h2>Conversation</h2>
     <p>
         <img src="img/apikey_url.png" alt="Esempio di programma che fa comportare il TJBot come un interprete">
+        <br> Per poter usare i blocchetti legati alla conversation, che si basa sul servizio IBM Watson Assistant, è necessario
+        possedere un account Watson e delle credenziali per la risorsa Assistant. Per farlo, segui <a href="account-conversation-tutorial.html" target="_blank">questo tutorial</a>.
         <br> Copiare e incollare le proprie credenziali, costituite da apikey e URL, nei blocchi di SNAP come illustrato qui
         sopra. Le variabili apikey e URL sono già presenti in ogni nuovo progetto.
     </p>

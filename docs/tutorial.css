@@ -1,14 +1,4 @@
-body {
-    /* background-color: rgb(255, 254, 247); */
-    font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  img {
+img {
     border: 10px solid rgb(0, 0, 0);
     border-radius: 20px;
-  }
-
-  a {
-    font-weight: bold;
   }

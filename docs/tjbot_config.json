@@ -1,0 +1,32 @@
+{
+  "conversation": {
+    "url": "",
+    "username": "",
+    "password": "",
+    "workspace": ""
+  },
+  "visual recognition": {
+    "url": "",
+    "apikey": ""
+  },
+  "speech to text": {
+    "url": "",
+    "username": "",
+    "password": ""
+  },
+  "language translator": {
+    "url": "",
+    "username": "",
+    "password": ""
+  },
+  "text to speech": {
+    "url": "",
+    "username": "",
+    "password": ""
+  },
+  "tone analyzer": {
+    "url": "",
+    "username": "",
+    "password": ""
+  }
+}
